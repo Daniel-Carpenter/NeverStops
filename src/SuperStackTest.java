@@ -3,6 +3,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+// right click the regular class
+// new / other / junit test class / click entire class and toString
+
 class SuperStackTest {
 
 	@BeforeEach
@@ -16,7 +19,11 @@ class SuperStackTest {
 
 	@Test
 	void testIsEmpty() {
-		fail("Not yet implemented");
+		SuperStack<Integer> stack = new SuperStack<Integer>(0);
+		boolean result = stack.isEmpty();
+		assertTrue(result);
+		
+		stack.push(new Double(9.9));
 	}
 
 	@Test

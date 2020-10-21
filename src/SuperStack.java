@@ -5,26 +5,36 @@ public class SuperStack<T>
 	private int top;
 	
 	public SuperStack(int size) {
-		items = new (T[]) new Object();
+		items = (T[]) new Object();
 	}
 	
 	boolean isEmpty() {
-		// TODO
-		return false;
+		return top == 0;
 	}
 	
 	boolean isFull() {
-		// TODO
-		return false;
+		return top == items.length;
 	}
 	
 	boolean push(T item) {
-		// TODO
+		if (isFull())
+		{
+			return false;
+		}
+		
+		items[top] = item;
 		return true;
 	}
 	
 	public T pop() {
-		// TODO
-		return null;
+		if (isEmpty())
+		{
+			return null;
+		}
+		else
+		{
+			--top;
+			return items[top];
+		}
 	}
 }
